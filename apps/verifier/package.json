@@ -1,0 +1,24 @@
+{
+  "name": "@keystone/verifier",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static verifier app for the Keystone voting system — runs entirely client-side with no server, verifiable by opening dist/index.html directly",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@keystone/shared-types": "workspace:*"
+  },
+  "devDependencies": {
+    "@keystone/config": "workspace:*",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.7.0",
+    "eslint": "^9.17.0",
+    "vite": "^6.0.0"
+  }
+}
