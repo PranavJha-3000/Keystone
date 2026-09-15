@@ -1,0 +1,10 @@
+node_modules
+.next
+dist
+out
+coverage
+.turbo
+pnpm-lock.yaml
+foundry
+lib
+cache
