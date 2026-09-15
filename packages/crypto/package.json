@@ -1,0 +1,33 @@
+{
+  "name": "@keystone/crypto",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cryptographic primitives: threshold ElGamal encryption, Chaum-Pedersen proofs, distributed key generation, and Semaphore identity management",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@keystone/shared-types": "workspace:*",
+    "@noble/curves": "^1.6.0",
+    "@noble/hashes": "^1.5.0",
+    "@semaphore-protocol/identity": "^4.0.3",
+    "@semaphore-protocol/group": "^4.0.3",
+    "@zk-kit/lean-imt": "^2.2.5"
+  },
+  "devDependencies": {
+    "@keystone/config": "workspace:*",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.7.0",
+    "eslint": "^9.17.0",
+    "vitest": "^2.1.0",
+    "fast-check": "^3.22.0"
+  }
+}
