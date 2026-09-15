@@ -1,0 +1,13 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+libs = ["lib"]
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+evm_version = "paris"
+
+[profile.ci]
+fuzz_runs = 1000
