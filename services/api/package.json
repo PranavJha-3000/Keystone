@@ -1,0 +1,29 @@
+{
+  "name": "@keystone/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fastify REST API for the Keystone voting system — ballot submission, tally queries, and admin endpoints",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "test": "echo \"No tests yet\" && exit 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@keystone/crypto": "workspace:*",
+    "@keystone/shared-types": "workspace:*",
+    "fastify": "^5.2.0",
+    "@fastify/cors": "^10.0.0",
+    "@fastify/jwt": "^9.0.0"
+  },
+  "devDependencies": {
+    "@keystone/config": "workspace:*",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.7.0",
+    "eslint": "^9.17.0"
+  }
+}

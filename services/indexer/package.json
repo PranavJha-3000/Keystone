@@ -1,0 +1,26 @@
+{
+  "name": "@keystone/indexer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "On-chain event indexer for the Keystone voting system — syncs ballot box events to a queryable database",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "test": "echo \"No tests yet\" && exit 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@keystone/shared-types": "workspace:*",
+    "fastify": "^5.2.0"
+  },
+  "devDependencies": {
+    "@keystone/config": "workspace:*",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.7.0",
+    "eslint": "^9.17.0"
+  }
+}
