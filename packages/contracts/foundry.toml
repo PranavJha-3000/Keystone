@@ -4,10 +4,17 @@ test = "test"
 script = "script"
 out = "out"
 libs = ["lib"]
+# Pinned so deployed bytecode is reproducible. The floor is set by dependencies, not taste:
+# the Semaphore verifier declares `>=0.8.23 <0.9.0` and OpenZeppelin `^0.8.20`, so 0.8.28 is
+# the smallest common stable choice. Bump only alongside a re-audit of deployed bytecode.
+solc_version = "0.8.28"
 optimizer = true
 optimizer_runs = 200
 via_ir = false
 evm_version = "paris"
+# BallotBox tests load generated proofs from test/fixtures. Foundry denies every path not
+# listed here, and the narrowest grant is a directory read — never write access.
+fs_permissions = [{ access = "read", path = "./test/fixtures" }]
 
 [profile.ci]
 fuzz_runs = 1000
